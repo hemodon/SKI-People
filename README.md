@@ -1,1 +1,2 @@
-# SKI-People
+# SKI-People Онлай магазин.
+### Учебны проект школы METHOD
