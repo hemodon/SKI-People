@@ -1,0 +1,37 @@
+.catalog {
+  overflow-x: hidden;
+  padding-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__link {
+    display: block;
+    padding: 10px 13px 12px;
+    color: #969eae;
+    background-color: #eeeff2;
+    border: 1px solid transparent;
+    border-radius: 32px;
+
+    &:hover {
+      border-color: #0044f0;
+      color: #0044f0;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: #0044f0;
+      border-color: #0044f0;
+    }
+  }
+}
