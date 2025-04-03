@@ -167,8 +167,8 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="breadcrumb">
+      </div> -->
+      <!-- <div class="breadcrumb">
         <div class="container">
           <nav class="breadcrumb__navigation">
             <ul class="breadcrumb__list">
@@ -185,7 +185,7 @@
           </nav>
         </div>
       </div> -->
-      <section class="goods">
+      <!-- <section class="goods">
         <div class="container">
           <h2 class="goods__title">Избранное</h2>
           <ul class="goods__list">
@@ -607,68 +607,102 @@
             </li>
           </ul>
         </div>
-      </section>
-      <!-- <section class="product">
+      </section> -->
+      <section class="product">
         <div class="container">
           <h2 class="product__title">Горные лыжи</h2>
-          <div class="product__slider">
-            <div class="product__slider-image"></div>
-            <div class="product__slider-thubnails"></div>
-          </div>
-          <div class="product__info">
-            <p class="product__info-price">5 000 ₽</p>
-            <p class="product__info-id">арт. 84348945757</p>
-            <h3 class="product__info-title">Общие характеристики</h3>
-            <table class="product__info-table details">
-              <tr class="details__row">
-                <td class="details__title">Коллекция</td>
-                <td class="details__data">Snow</td>
-              </tr>
-              <tr class="details__row">
-                <td class="details__title">Производитель</td>
-                <td class="details__data">Россия</td>
-              </tr>
-              <tr class="details__row">
-                <td class="details__title">Гарантия</td>
-                <td class="details__data">18 мес.</td>
-              </tr>
-              <tr class="details__row">
-                <td class="details__title">Срок службы</td>
-                <td class="details__data">5 лет</td>
-              </tr>
-              <tr class="details__row">
-                <td class="details__title">Цвет</td>
-                <td class="details__data">Синий</td>
-              </tr>
-              <tr class="details__row">
-                <td class="details__title">Макс. нагрузка</td>
-                <td class="details__data">130 кг</td>
-              </tr>
-            </table>
-            <div class="product__info-controls">
-              <button class="product__info-card" type="button">В корзину</button
-              ><button class="product__info-like" type="button">
-                <svg
-                  width="16"
-                  height="14"
-                  viewBox="0 0 16 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8.41301 12.8733C8.18634 12.9533 7.81301 12.9533 7.58634 12.8733C5.65301 12.2133 1.33301 9.45998 1.33301 4.79332C1.33301 2.73332 2.99301 1.06665 5.03967 1.06665C6.25301 1.06665 7.32634 1.65332 7.99967 2.55998C8.67301 1.65332 9.75301 1.06665 10.9597 1.06665C13.0063 1.06665 14.6663 2.73332 14.6663 4.79332C14.6663 9.45998 10.3463 12.2133 8.41301 12.8733Z"
-                    fill="white"
-                    stroke="#1C1C1C"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+          <div class="product__wrapper">
+            <div class="product__slider">
+              <img
+                class="product__slider-image"
+                src="/img/slider.jpg"
+                alt="Изображение товара"
+              />
+              <ul class="product__slider-thumbnails thumbnails">
+                <li class="thumbnails__item">
+                  <img
+                    class="thumbnails__item-image"
+                    src="/img/thubnails.jpg"
+                    alt="Изображение товара"
                   />
-                </svg>
-              </button>
+                </li>
+                <li class="thumbnails__item">
+                  <img
+                    class="thumbnails__item-image"
+                    src="/img/thubnails.jpg"
+                    alt="Изображение товара"
+                  />
+                </li>
+                <li class="thumbnails__item">
+                  <img
+                    class="thumbnails__item-image"
+                    src="/img/thubnails.jpg"
+                    alt="Изображение товара"
+                  />
+                </li>
+                <li class="thumbnails__item">
+                  <img
+                    class="thumbnails__item-image"
+                    src="/img/thubnails.jpg"
+                    alt="Изображение товара"
+                  />
+                </li>
+              </ul>
+            </div>
+            <div class="product__info">
+              <p class="product__info-price">5 000 ₽</p>
+              <p class="product__info-id">арт. 84348945757</p>
+              <h3 class="product__info-title">Общие характеристики</h3>
+              <table class="product__info-table details">
+                <tr class="details__row">
+                  <td class="details__title">Коллекция</td>
+                  <td class="details__data">Snow</td>
+                </tr>
+                <tr class="details__row">
+                  <td class="details__title">Производитель</td>
+                  <td class="details__data">Россия</td>
+                </tr>
+                <tr class="details__row">
+                  <td class="details__title">Гарантия</td>
+                  <td class="details__data">18 мес.</td>
+                </tr>
+                <tr class="details__row">
+                  <td class="details__title">Срок службы</td>
+                  <td class="details__data">5 лет</td>
+                </tr>
+                <tr class="details__row">
+                  <td class="details__title">Цвет</td>
+                  <td class="details__data">Синий</td>
+                </tr>
+                <tr class="details__row">
+                  <td class="details__title">Макс. нагрузка</td>
+                  <td class="details__data">130 кг</td>
+                </tr>
+              </table>
+              <div class="product__info-controls">
+                <button class="product__info-card" type="button">
+                  В корзину</button
+                ><button class="product__info-like" type="button">
+                  <svg
+                    class="product__info-svg"
+                    width="16"
+                    height="14"
+                    viewBox="0 0 16 14"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.41301 12.8733C8.18634 12.9533 7.81301 12.9533 7.58634 12.8733C5.65301 12.2133 1.33301 9.45998 1.33301 4.79332C1.33301 2.73332 2.99301 1.06665 5.03967 1.06665C6.25301 1.06665 7.32634 1.65332 7.99967 2.55998C8.67301 1.65332 9.75301 1.06665 10.9597 1.06665C13.0063 1.06665 14.6663 2.73332 14.6663 4.79332C14.6663 9.45998 10.3463 12.2133 8.41301 12.8733Z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="cart">
+      <!-- <section class="cart">
         <div class="container">
           <h2 class="cart__title">Корзина</h2>
           <ul class="cart__list">
@@ -774,8 +808,8 @@
             </fieldset>
           </form>
         </div>
-      </section>
-      <section class="order">
+      </section> -->
+      <!-- <section class="order">
         <div class="container">
           <div class="order__wrapper">
             <h2 class="order__title">Заказ успешно размещен</h2>

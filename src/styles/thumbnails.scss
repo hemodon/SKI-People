@@ -1,0 +1,26 @@
+.thumbnails {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 14px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 12px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 16px;
+  }
+
+  &__item {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__item-image {
+    width: 100%;
+    object-fit: cover;
+  }
+}
