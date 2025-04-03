@@ -1,11 +1,42 @@
 .goods {
+  padding-bottom: 40px;
 
+  @media (min-width: 1024px) {
+    padding-bottom: 60px;
+  }
   &__title {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 40px;
+    }
   }
 
-  &__item {
-  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 32px 8px;
 
-  &__card {
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 32px 10px;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+      gap: 40px 16px;
+    }
+
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+    }
   }
 }
