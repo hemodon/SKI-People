@@ -1,0 +1,35 @@
+.breadcrumb {
+  &__navigation {
+    padding-bottom: 24px;
+
+    @media (min-width: 768px) {
+      padding-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 19px;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '>';
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #969eae;
+  }
+}
