@@ -54,6 +54,13 @@
     }
   }
 
+  &__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+
   &__info-price {
     font-size: 20px;
     margin-bottom: 12px;
@@ -111,9 +118,9 @@
     width: 16px;
     height: 16px;
 
-    &--active>.product__info-svg{
-      stroke: #0044F0;
-      fill: #0044F0;
+    &--active > .product__info-svg {
+      stroke: #0044f0;
+      fill: #0044f0;
     }
   }
 

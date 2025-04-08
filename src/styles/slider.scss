@@ -1,0 +1,22 @@
+.slider {
+  &__wrapper {
+    width: 832px;
+    object-fit: cover;
+  }
+
+  &__slide {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  &__slide-image {
+  }
+
+  &__arrow-next {
+    right: 24px;
+  }
+
+  &__arrow-prev {
+    left: 24px;
+  }
+}
