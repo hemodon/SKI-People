@@ -1,7 +1,7 @@
-import { newEl } from "../source";
+import { newEl } from "../js/source";
 import { layout } from "./layout";
 
-const child=`
+const child = `
   <a href="/" class="footer__logo-link">
   <svg
     class="footer__logo-icon"
@@ -135,10 +135,16 @@ const child=`
 <p class="footer__copyright">©SKI People, 2025</p>
 `;
 
-export const footer=()=>{
+let rendered = false;
+
+export const footer = () => {
+  if (rendered) {
+    return;
+  }
+
   const el = newEl("footer", "footer");
 
-  el.append(layout(child,'footer__container'));
-  
-  return el;
-}
+  el.append(layout(child, "footer__container"));
+  document.body.append(el);
+  rendered = true;
+};

@@ -1,4 +1,4 @@
-import { newEl } from "../source";
+import { newEl } from "../js/source";
 import { layout } from "./layout";
 
 const child = `
@@ -116,10 +116,16 @@ const child = `
 </div>
 `;
 
+let rendered = false;
+
 export const header = () => {
+  if (rendered) {
+    return;
+  }
+
   const el = newEl("header", "header");
 
   el.append(layout(child));
-  
-  return el;
+  document.body.append(el);
+  rendered = true;
 };

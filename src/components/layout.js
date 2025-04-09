@@ -1,4 +1,4 @@
-import { newEl } from "../source";
+import { newEl } from "../js/source";
 
 export const layout = (child, extensionСlass) => {
   const el = newEl("div", "container");
