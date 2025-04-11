@@ -4,6 +4,7 @@ import { footer } from "../components/footer";
 import { main } from "../components/main";
 import { productList } from "../components/productList";
 import { getData } from "./api";
+import { catalog } from "../components/catalog";
 
 const router = new Navigo("/", { linksSelector: "a[href^='/']" });
 
@@ -13,6 +14,7 @@ export const initRouter = () => {
       const goods = await getData();
 
       header();
+      catalog(main(),goods);
       productList("Список товара", goods, main());
       footer();
     })

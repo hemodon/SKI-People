@@ -1,36 +1,37 @@
 import { newEl } from "../js/source";
 import { layout } from "./layout";
 
-const child = `
-  <ul class="catalog__list">
-    <li class="catalog__item">
-      <a href="#" class="catalog__link catalog__link--active">Все </a>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="catalog__link">Лыжи</a>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="catalog__link">Сноуборды</a>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="catalog__link">Экипировка</a>
-    </li>
-    <li class="catalog__item">
-      <a href="#" class="catalog__link">Ботинки</a>
-    </li>
-  </ul>
-`;
-
 let rendered = false;
 
-export const catalog = () => {
+export const catalog = (parent, goods = []) => {
   if (rendered) {
-    return "";
+    return document.querySelector(".catalog");
   }
+
+  const types = goods.map(({ type }) => type);
+  const list = [...new Set(types)]
+    .map(
+      (item) => `
+      <li class="catalog__item">
+        <a href="#" class="catalog__link">${item}</a>
+      </li>
+    `
+    )
+    .join("");
+
+  const child = `
+    <ul class="catalog__list">
+      <li class="catalog__item">
+        <a href="#" class="catalog__link catalog__link--active">Все</a>
+      </li>
+      ${list}
+    </ul>
+  `;
 
   const el = newEl("div", "catalog");
 
   el.append(layout(child));
+  parent.append(el);
   rendered = true;
 
   return el;
